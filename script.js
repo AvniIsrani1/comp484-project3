@@ -76,6 +76,7 @@ highlightListItems();
 // timerButton using addEventListener for 'click' and 'dblclick' [10].
 
 function startFlashing(){
+    stopFlashing(); // need to add this because otherwise double clicking for stopFlashing is leading this to still run (since still clicked twice)
     intervalId = setInterval(()=>{
         controlPanel.classList.toggle("hidden");
     }, 500)
