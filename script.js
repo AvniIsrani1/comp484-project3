@@ -52,13 +52,8 @@ function toggleStatus(e){
 toggleButton.addEventListener('click', toggleStatus);
 
 // Task 8: Dynamic Element Creation
-let spanElement = "";
 function createTimestamp(){
-    // if spanElement already exists, remove it (otherwise, the span elements start stacking)
-    if(spanElement){
-        statusOutput.removeChild(spanElement);
-    }
-    spanElement = document.createElement("span"); // create new span
+    const spanElement = document.createElement("span"); // create new span
     spanElement.innerHTML = new Date().toLocaleTimeString(); // set inner HTML to current time
     statusOutput.appendChild(spanElement); // add span inside status-output div
 }
